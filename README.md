@@ -1,27 +1,64 @@
-# ProjetoInicial
+# Multi-Step Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Formulário de assinatura em 4 etapas, feito com Angular 17 durante um curso. Simula a contratação de um plano de serviço de jogos online.
 
-## Development server
+## O que o projeto faz
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O usuário avança por 4 etapas, com uma barra lateral mostrando o progresso:
 
-## Code scaffolding
+1. **Your info** — Nome, e-mail e telefone.
+2. **Select plan** — Escolha entre Arcade (`$9/mo`), Advanced (`$12/mo`) e Pro (`$15/mo`), com cobrança mensal ou anual.
+3. **Add-ons** — Extras opcionais: Online service (`+$1/mo`), Larger storage (`+$2/mo`) e Customizable profile (`+$2/mo`).
+4. **Summary** — Resumo do plano, dos add-ons e do total, com botão de confirmação.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias
 
-## Build
+- Angular 17 (módulos, control flow `@switch`, `output()`)
+- Reactive Forms (`ReactiveFormsModule`)
+- TypeScript 5.4
+- CSS puro
+- Karma + Jasmine (testes)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Estrutura
 
-## Running unit tests
+```
+src/app/
+├── app.component.*          # Controla qual etapa aparece (@switch)
+└── components/
+    ├── sidebar/             # Barra lateral com arte decorativa
+    ├── steps/               # Lista das 4 etapas
+    ├── personal-info/       # Etapa 1
+    ├── select-plan/         # Etapa 2
+    ├── add-ons/             # Etapa 3
+    ├── summary/             # Etapa 4
+    └── next-button/         # Botão "Next Step" reutilizável
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como rodar
 
-## Running end-to-end tests
+```bash
+npm install
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Abra `http://localhost:4200/`.
 
-## Further help
+## Outros comandos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `npm run build` — Gera o build de produção em `dist/`.
+- `npm test` — Roda os testes unitários com Karma.
+
+## Status
+
+Em desenvolvimento. Já pronto:
+
+- Layout das 4 etapas.
+- Navegação entre etapas via botão **Next**.
+
+Ainda falta:
+
+- Ligar os campos aos Reactive Forms e validar.
+- Botão **Go Back** funcional.
+- Destacar a etapa ativa na barra lateral.
+- Alternância mensal/anual com cálculo de preços.
+- Resumo e total dinâmicos.
