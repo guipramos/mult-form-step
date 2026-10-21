@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step-number {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step.active .step-number {
+  background-color: hsl(206, 94%, 87%);
+  border-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+}
+
+.step-content p,
+.step-content h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.step-content p {
+  color: hsl(229, 24%, 87%);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.step-content h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}

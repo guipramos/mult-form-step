@@ -1,0 +1,158 @@
+:host {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 3.5rem 1.25rem 4.5rem;
+}
+
+@media (max-width: 900px) {
+  .info {
+    padding: 2rem 1.75rem 1.25rem;
+  }
+}
+
+.info-header h1 {
+  margin: 0;
+  color: hsl(213, 96%, 18%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.info-header p {
+  margin: 0.7rem 0 0;
+  color: hsl(231, 11%, 63%);
+  line-height: 1.6;
+}
+
+.info-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.2rem;
+}
+
+.summary {
+  padding: 1.25rem;
+  border-radius: 10px;
+  background-color: hsl(217, 100%, 97%);
+}
+
+.summary-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-plan p {
+  margin: 0;
+}
+
+.summary-plan-name {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.summary-change {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.summary-change:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.summary-plan-price {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.summary hr {
+  border: 0;
+  border-top: 1px solid hsl(229, 24%, 87%);
+  margin: 1.1rem 0;
+}
+
+.summary-addons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.summary-addons li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.summary-addons .addon-name {
+  color: hsl(231, 11%, 63%);
+}
+
+.summary-addons .addon-price {
+  color: hsl(213, 96%, 18%);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.total-label {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+}
+
+.total-price {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-confirm {
+  background: hsl(243, 100%, 62%);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.95rem 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-confirm:hover {
+  background: hsl(243, 100%, 79%);
+}
+
+.btn-back {
+  background: transparent;
+  color: hsl(231, 11%, 63%);
+  border: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  color: hsl(213, 96%, 18%);
+}

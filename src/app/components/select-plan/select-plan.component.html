@@ -1,0 +1,54 @@
+<section class="info">
+  <header class="info-header">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing.</p>
+  </header>
+
+  <form class="info-form">
+    <div class="plans">
+      <label class="plan">
+        <input type="radio" name="plan" value="arcade" />
+        <span class="plan-card">
+          <span class="plan-icon plan-icon-arcade" aria-hidden="true"></span>
+          <span class="plan-name">Arcade</span>
+          <span class="plan-price">$9/mo</span>
+          <span class="plan-bonus">2 months free</span>
+        </span>
+      </label>
+
+      <label class="plan">
+        <input type="radio" name="plan" value="advanced" />
+        <span class="plan-card">
+          <span class="plan-icon plan-icon-advanced" aria-hidden="true"></span>
+          <span class="plan-name">Advanced</span>
+          <span class="plan-price">$12/mo</span>
+          <span class="plan-bonus">2 months free</span>
+        </span>
+      </label>
+
+      <label class="plan">
+        <input type="radio" name="plan" value="pro" />
+        <span class="plan-card">
+          <span class="plan-icon plan-icon-pro" aria-hidden="true"></span>
+          <span class="plan-name">Pro</span>
+          <span class="plan-price">$15/mo</span>
+          <span class="plan-bonus">2 months free</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="billing">
+      <span class="billing-label active">Monthly</span>
+      <label class="switch">
+        <input type="checkbox" name="billing" aria-label="Yearly billing" />
+        <span class="switch-slider"></span>
+      </label>
+      <span class="billing-label">Yearly</span>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn-back">Go Back</button>
+      <app-next-button (clicked)="next.emit()" />
+    </div>
+  </form>
+</section>

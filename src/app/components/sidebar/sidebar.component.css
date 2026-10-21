@@ -1,0 +1,81 @@
+:host {
+  display: flex;
+}
+
+.aside {
+  position: relative;
+  overflow: hidden;
+  width: 274px;
+  background-color: hsl(243, 100%, 62%);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .aside {
+    width: 100%;
+  }
+}
+
+.aside-art {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 220px;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  display: block;
+}
+
+.blob-orange {
+  width: 220px;
+  height: 220px;
+  left: -78px;
+  bottom: -8px;
+  border-radius: 50%;
+  background: hsl(23, 100%, 75%);
+}
+
+.blob-purple {
+  width: 210px;
+  height: 180px;
+  left: 18px;
+  bottom: -48px;
+  border-radius: 50% 55% 45% 65%;
+  background: hsl(260, 90%, 72%);
+}
+
+.blob-pink {
+  width: 300px;
+  height: 160px;
+  right: -56px;
+  bottom: -52px;
+  border-radius: 140px 120px 0 50px;
+  background: hsl(354, 91%, 74%);
+}
+
+.dash {
+  position: absolute;
+  width: 7px;
+  background: #fff;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dash-1 {
+  height: 26px;
+  right: 78px;
+  bottom: 78px;
+  transform: rotate(28deg);
+}
+
+.dash-2 {
+  height: 16px;
+  right: 58px;
+  bottom: 62px;
+  transform: rotate(-18deg);
+}

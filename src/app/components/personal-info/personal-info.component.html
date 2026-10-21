@@ -1,0 +1,42 @@
+<section class="info">
+  <header class="info-header">
+    <h1>Personal info</h1>
+    <p>Please provide your name, email address, and phone number.</p>
+  </header>
+
+  <form class="info-form">
+    <div class="field">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="e.g. Stephen King"
+      />
+    </div>
+
+    <div class="field">
+      <label for="email">Email Address</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="e.g. stephenking@lorem.com"
+      />
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone Number</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        placeholder="e.g. +1 234 567 890"
+      />
+    </div>
+
+    <div class="actions">
+      <app-next-button (clicked)="next.emit()" />
+    </div>
+  </form>
+</section>
